@@ -1,17 +1,14 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Nathan Rawson
 image: /img/products-full-width.jpg
 file: /img/appendix-c-coursework-assignment-briefing-sheet-4.pdf
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: $
+subheading: Full Stack Software Developer
 mainpitch:
-  title: Why Kaldi
-  description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+  title: Why Hire Me!
+  description: |
+    I am a great software developer with years of experience.
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -41,28 +38,24 @@ intro:
         space where you can hang out with fellow coffee lovers and learn about
         coffee making techniques. All of the artwork on display there is for
         sale. The full price you pay goes to the artist.
-  heading: What we offer
+  heading: "4"
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
 image2: /img/apple-touch-icon.png
-description: crack cocaine
+description: "4"
 main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+  heading: "4"
+  description: "4"
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
+    alt: "4"
+    image: /img/apple-touch-icon.png
   image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
+    alt: "4"
+    image: /img/apple-touch-icon.png
   image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
+    alt: "4"
+    image: /img/apple-touch-icon.png
 ---

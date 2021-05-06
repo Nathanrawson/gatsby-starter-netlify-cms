@@ -1,10 +1,8 @@
 ---
-templateKey: index-page
-title: Nathan Rawson
-image: /img/products-full-width.jpg
-file: /img/appendix-c-coursework-assignment-briefing-sheet-4.pdf
 heading: $
 subheading: Full Stack Software Developer
+templateKey: index-page
+colorTheme: mod
 mainpitch:
   title: Why Hire Me!
   description: |
@@ -45,7 +43,7 @@ intro:
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
 image2: /img/apple-touch-icon.png
-description: "4"
+title: Nathan Rawson
 main:
   heading: "4"
   description: "4"
@@ -58,4 +56,7 @@ main:
   image3:
     alt: "4"
     image: /img/apple-touch-icon.png
+image: /img/products-full-width.jpg
+file: /img/appendix-c-coursework-assignment-briefing-sheet-4.pdf
+description: "4"
 ---

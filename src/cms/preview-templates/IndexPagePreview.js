@@ -6,15 +6,24 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
 
   if (data) {
+    console.log(theme)
+    theme = data.colorTheme;
+    var mainColor;
+    var secondColor;
+    if (theme == "mod") {
+      mainColor = "#d3d4ce"
+      secondColor = "#013246"
+    } else {
+      mainColor = "purple"
+      secondColor = "red"
+    }
     return (
       <IndexPageTemplate
         image={getAsset(data.image)}
         title={data.title}
         heading={data.heading}
-        subheading={data.subheading}
-        description={data.description}
-        intro={data.intro || { blurbs: [] }}
-        mainpitch={data.mainpitch || {}}
+        mainColor={mainColor}
+        secondColor={secondColor}
       />
     )
   } else {

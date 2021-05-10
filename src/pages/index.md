@@ -1,8 +1,8 @@
 ---
-heading: $
+heading: Full Stack Software Developer
 subheading: Full Stack Software Developer
 templateKey: index-page
-colorTheme: clas
+colorTheme: hip
 mainpitch:
   title: Why Hire Me!
   description: |

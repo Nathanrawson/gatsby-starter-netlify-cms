@@ -18,7 +18,7 @@ const Footer = (props) => {
           <div style={{ maxWidth: '100vw' }} className="columns">
             <div className="column is-4">
               <section className="menu">
-                <ul className="menu-list">
+                <ul className="footer-item">
                   <li>
                     <Link to="/" className="navbar-item">
                       Home
@@ -36,7 +36,7 @@ const Footer = (props) => {
             </div>
             <div className="column is-4">
               <section>
-                <ul className="menu-list">
+                <ul className="footer-item">
                   <li>
                     <Link className="navbar-item" to="/blog">
                       Latest Stories

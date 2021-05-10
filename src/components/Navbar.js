@@ -33,15 +33,16 @@ const Navbar = class extends React.Component {
   }
 
   render() {
+    var color = this.props.color;
     return (
-      <nav style={{ backgroundColor: this.props.backgroundColor, color: this.props.color }}
+      <nav style={{ backgroundColor: this.props.backgroundColor, color: color }}
         className="navbar "
         role="navigation"
         aria-label="main-navigation"
       >
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
+            <Link to="/" style={{ color: color }} className="navbar-item" title="Logo">
               <strong>Nathan Rawson</strong>
             </Link>
             {/* Hamburger menu */}
@@ -60,13 +61,13 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
+              <Link style={{ color: color }} className="navbar-item" to="/about">
                 About
               </Link>
-              <Link className="navbar-item" to="/blog">
+              <Link style={{ color: color }} className="navbar-item" to="/blog">
                 Blog
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link style={{ color: color }} className="navbar-item" to="/contact">
                 Contact
               </Link>
             </div>

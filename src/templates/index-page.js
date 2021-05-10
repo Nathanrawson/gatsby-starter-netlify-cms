@@ -90,9 +90,13 @@ const IndexPage = ({ data }) => {
   if (theme == "mod") {
     mainColor = "#d3d4ce"
     secondColor = "#013246"
-  } else {
+  } else if (theme == "hip") {
     mainColor = "#e2b86e"
     secondColor = "#315a70"
+  }
+  else {
+    mainColor = "black"
+    secondColor = "white"
   }
 
   return (

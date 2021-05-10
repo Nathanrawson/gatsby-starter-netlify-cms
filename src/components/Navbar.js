@@ -34,8 +34,8 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
+      <nav style={{ backgroundColor: this.props.backgroundColor, color: this.props.color }}
+        className="navbar "
         role="navigation"
         aria-label="main-navigation"
       >

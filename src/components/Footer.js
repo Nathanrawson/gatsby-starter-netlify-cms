@@ -10,11 +10,11 @@ import vimeo from '../img/social/vimeo.svg'
 const Footer = (props) => {
   console.log(props)
   return (
-    <footer style={{ backgroundColor: props.color, color: props.backgroundColor }} className="footer has-text-white-ter">
+    <footer style={{ backgroundColor: props.color, color: props.backgroundColor }} className="footer">
       <div className="content has-text-centered">
       </div>
-      <div className="content has-text-centered  has-text-white-ter">
-        <div className="container has-text-white-ter">
+      <div className="content has-text-centered ">
+        <div className="container">
           <div style={{ maxWidth: '100vw' }} className="columns">
             <div className="column is-4">
               <section className="menu">

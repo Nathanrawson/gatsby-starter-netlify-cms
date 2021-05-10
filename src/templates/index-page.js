@@ -20,7 +20,7 @@ export const IndexPageTemplate = ({
   <div style={{
     backgroundColor: mainColor
   }}>
-    <Navbar />
+    <Navbar backgroundColor={mainColor} color={secondColor} />
 
     <div
       className="full-width-image margin-top-0"

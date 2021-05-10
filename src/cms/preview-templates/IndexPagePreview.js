@@ -13,9 +13,13 @@ const IndexPagePreview = ({ entry, getAsset }) => {
     if (theme == "mod") {
       mainColor = "#d3d4ce"
       secondColor = "#013246"
-    } else {
-      mainColor = "purple"
-      secondColor = "red"
+    } else if (theme == "hip") {
+      mainColor = "#e2b86e"
+      secondColor = "#315a70"
+    }
+    else {
+      mainColor = "black"
+      secondColor = "white"
     }
     return (
       <IndexPageTemplate

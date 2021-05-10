@@ -91,8 +91,8 @@ const IndexPage = ({ data }) => {
     mainColor = "#d3d4ce"
     secondColor = "#013246"
   } else {
-    mainColor = "purple"
-    secondColor = "red"
+    mainColor = "#e2b86e"
+    secondColor = "#315a70"
   }
 
   return (

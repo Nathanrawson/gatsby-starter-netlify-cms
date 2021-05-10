@@ -7,7 +7,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
 
   if (data) {
     console.log(theme)
-    theme = data.colorTheme;
+    var theme = data.colorTheme;
     var mainColor;
     var secondColor;
     if (theme == "mod") {

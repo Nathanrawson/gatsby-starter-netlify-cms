@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+
 
 export const IndexPageTemplate = ({
   image,
@@ -18,6 +20,8 @@ export const IndexPageTemplate = ({
   <div style={{
     backgroundColor: mainColor
   }}>
+    <Navbar />
+
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -66,7 +70,9 @@ export const IndexPageTemplate = ({
     <section className="section section--gradient">
 
     </section>
+    <Footer backgroundColor={mainColor} color={secondColor} />
   </div>
+
 )
 
 IndexPageTemplate.propTypes = {

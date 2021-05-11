@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import Profile from '../components/Profile'
+import ReactHtmlParser from 'react-html-parser'
 
 
 export const IndexPageTemplate = ({
@@ -16,75 +17,83 @@ export const IndexPageTemplate = ({
   colorTheme,
   mainColor,
   secondColor,
-}) => (
+  profile,
 
-  <div style={{
-    backgroundColor: mainColor
-  }}>
-    <Navbar backgroundColor={mainColor} color={secondColor} />
+}) => {
+  console.log(profile)
 
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
+  return (
+    <div style={{
+      backgroundColor: mainColor
+    }}>
+      <Navbar backgroundColor={mainColor} color={secondColor} />
+
       <div
+        className="full-width-image margin-top-0"
         style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
+          backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
+            })`,
+          backgroundPosition: `top left`,
+          backgroundAttachment: `fixed`,
         }}
       >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+        <div
           style={{
-            backgroundColor: mainColor,
-            color: secondColor,
+            display: 'flex',
+            height: '150px',
             lineHeight: '1',
-            padding: '0.25em',
+            justifyContent: 'space-around',
+            alignItems: 'left',
+            flexDirection: 'column',
           }}
         >
-          {title}
+          <h1
+            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+            style={{
+              backgroundColor: mainColor,
+              color: secondColor,
+              lineHeight: '1',
+              padding: '0.25em',
+            }}
+          >
+            {title}
 
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            backgroundColor: mainColor,
-            color: secondColor,
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {heading}
-          {colorTheme}
-        </h3>
+          </h1>
+          <h3
+            className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+            style={{
+              backgroundColor: mainColor,
+              color: secondColor,
+              lineHeight: '1',
+              padding: '0.25em',
+            }}
+          >
+            {heading}
+            {colorTheme}
+          </h3>
+        </div>
       </div>
+      <section className="section section--gradient">
+        {ReactHtmlParser(profile)}
+        <Profile />
+      </section>
+      <Footer backgroundColor={mainColor} color={secondColor} />
     </div>
-    <section className="section section--gradient">
-      <Profile />
-    </section>
-    <Footer backgroundColor={mainColor} color={secondColor} />
-  </div>
 
-)
+  )
+}
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   colorTheme: PropTypes.string,
+  profile: PropTypes.string,
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+  const { html } = data.markdownRemark;
   var theme = frontmatter.colorTheme;
   var mainColor;
   var secondColor;
@@ -99,10 +108,11 @@ const IndexPage = ({ data }) => {
     mainColor = "black"
     secondColor = "white"
   }
-
+  console.log(frontmatter)
   return (
     <Layout>
       <IndexPageTemplate
+        profile={html}
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -127,6 +137,7 @@ export default IndexPage
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      html
       frontmatter {
         title
         image {

@@ -7,6 +7,7 @@ mainpitch:
   title: Why Hire Me!
   description: |
     I am a great software developer with years of experience.
+profile: "**test and more test**"
 intro:
   blurbs:
     - image: /img/coffee.png

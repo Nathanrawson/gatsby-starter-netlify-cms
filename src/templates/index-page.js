@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import Profile from '../components/Profile'
 
 
 export const IndexPageTemplate = ({
@@ -68,7 +69,7 @@ export const IndexPageTemplate = ({
       </div>
     </div>
     <section className="section section--gradient">
-
+      <Profile />
     </section>
     <Footer backgroundColor={mainColor} color={secondColor} />
   </div>
